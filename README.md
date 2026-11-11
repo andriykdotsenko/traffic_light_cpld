@@ -47,7 +47,7 @@ Buttons are active-low: one side goes to GND and the pin uses the internal weak 
  Hardware
 
 - MAX II EPM570 development board (50 MHz oscillator on PIN_64)
-- 2 push buttons, 3 LEDs, 2 common-anode 7-segment displays, current-limiting resistors <values>
+- 2 push buttons, 3 LEDs, 2 common-anode 7-segment displays, current-limiting resistors
 
  Build and program
 
@@ -67,4 +67,4 @@ Buttons are active-low: one side goes to GND and the pin uses the internal weak 
 
  All checks pass (`ALL TESTS PASSED`).
 
- [![Simulation waveform](testbench/Simulation waveform.png)](https://github.com/andriykdotsenko/traffic_light_fpga/blob/dcd49b473f96677f3e980f26e94ccbba7f45ee11/testbench/Simulation%20waveform.png)
+  ![waveform](testbench/waveform.png)
