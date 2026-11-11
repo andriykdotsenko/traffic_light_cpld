@@ -44,27 +44,27 @@ https://github.com/user-attachments/assets/20928206-9089-47d3-80a3-71c815475f70
 
 Buttons are active-low: one side goes to GND and the pin uses the internal weak pull-up. The code inverts the inputs.
 
- Hardware
+## Hardware
 
 - MAX II EPM570 development board (50 MHz oscillator on PIN_64)
 - 2 push buttons, 3 LEDs, 2 common-anode 7-segment displays, current-limiting resistors
 
- Build and program
+## Build and program
 
 1. Open `Trafic_light.qpf` in Quartus II 13.0 (Web Edition)
 2. Compile the project (Processing → Start Compilation)
 3. Program the board through USB-Blaster (Tools → Programmer)
 4. Press the reset button once after power-up
 
- Verification
+## Verification
 
- [`testbench/traffic_fsm.sv`](https://github.com/andriykdotsenko/traffic_light_fpga/blob/ac4e63be177204fd9437fdd726197f44bd72ff8b/testbench/traffic_fsm.sv) is a self-checking testbench for `traffic_fsm` (Icarus Verilog 12, EDA Playground). It checks:
+[`testbench/traffic_fsm.sv`](testbench/traffic_fsm.sv) is a self-checking testbench for `traffic_fsm` (Icarus Verilog 12, EDA Playground). It checks:
 
- - reset: red lamp on, counter at 40
- - full cycle with measured state durations (RED 41, YELLOW 8, GREEN 41 ticks)
- - `btn_next` forcing a transition in every state
- - reset in the middle of a countdown
+- reset: red lamp on, counter at 40
+- full cycle with measured state durations (RED 41, YELLOW 8, GREEN 41 ticks)
+- `btn_next` forcing a transition in every state
+- reset in the middle of a countdown
 
- All checks pass (`ALL TESTS PASSED`).
+All checks pass (`ALL TESTS PASSED`).
 
-[  ![waveform](testbench/waveform.png)](https://github.com/andriykdotsenko/traffic_light_fpga/blob/86c18a0d270b790c0398e2380f804e026b9ae285/testbench/Simulation%20waveform.png)
+![waveform](testbench/Simulation%20waveform.png)
