@@ -1,4 +1,4 @@
- Traffic Light Controller on CPLD (SystemVerilog)
+# Traffic Light Controller on CPLD (SystemVerilog)
 
 Traffic light controller written in SystemVerilog and running on an Altera MAX II (EPM570) CPLD board, with two 7-segment countdown displays and two push buttons.
 
@@ -8,7 +8,7 @@ https://github.com/user-attachments/assets/20928206-9089-47d3-80a3-71c815475f70
 
 
 
- Features
+## Features
 
 - 4-state FSM: RED → YELLOW → GREEN → YELLOW → RED. The display counts 40 → 0 in red and green (41 s) and 7 → 0 in yellow (8 s)
 - Countdown of the remaining seconds on two independent 7-segment displays (common anode)
@@ -16,7 +16,7 @@ https://github.com/user-attachments/assets/20928206-9089-47d3-80a3-71c815475f70
 - Button conditioning: 2-FF synchronizer, debounce (10 ms) and rising-edge detector
 - 50 MHz on-board clock divided down to a 1 Hz tick
 
- Module structure
+## Module structure
 
 | Module | Purpose |
 |---|---|
@@ -29,7 +29,7 @@ https://github.com/user-attachments/assets/20928206-9089-47d3-80a3-71c815475f70
 | `split_digits` | Splits the seconds value into tens and ones |
 | `seg7_decoder` | Digit → 7-segment pattern |
 
- Pin assignments
+## Pin assignments
 
 | Signal | Pin |
 |---|---|
