@@ -67,4 +67,4 @@ Buttons are active-low: one side goes to GND and the pin uses the internal weak 
 
  All checks pass (`ALL TESTS PASSED`).
 
-  ![waveform](testbench/waveform.png)
+[  ![waveform](testbench/waveform.png)](https://github.com/andriykdotsenko/traffic_light_fpga/blob/86c18a0d270b790c0398e2380f804e026b9ae285/testbench/Simulation%20waveform.png)
